@@ -250,7 +250,7 @@ export default function JuegoMesaForense() {
     setPreguntaActual(preguntas[indiceOriginal]);
   };
 
-  const responder = (indice) => {
+  const responder = (indice: number) => {
     if (indice === preguntaActual.correcta) {
       setMensaje(`✅ Correcto. El Jugador ${jugador} mantiene su avance.`);
     } else {
@@ -387,7 +387,7 @@ export default function JuegoMesaForense() {
                   </h3>
 
                   <div className="grid gap-3">
-                    {preguntaActual.opciones.map((opcion, index) => (
+                    {preguntaActual.opciones.map((opcion: string, index: number) => (
                       <motion.button
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
